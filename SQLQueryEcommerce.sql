@@ -69,7 +69,8 @@ CREATE TABLE product (
 	name VARCHAR(500),
 	description VARCHAR(4000),
 	product_image VARCHAR(1000),
-	CONSTRAINT pk_product PRIMARY KEY (id)
+	CONSTRAINT pk_product PRIMARY KEY (id),
+	CONSTRAINT fk_product_category FOREIGN KEY (category_id) REFERENCES product_category (id)
 );
 
 CREATE TABLE product_item (
